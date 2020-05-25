@@ -30,7 +30,7 @@ belongs_to :user
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |id|integer|null: false, unique: true|
 <!-- グループのメンバー　中のメッセージ
 グループの名前　削除　 -->
@@ -44,7 +44,7 @@ has_many :groups_users
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|content|string|null: false|
+|content|string||
 |user_id|integer|null: false, foreign_key:true, unique: true|
 |group_id|integer|null: false, unique: true|
 <!-- user 時間　内容　画像　どのグループのメッセージなのか
