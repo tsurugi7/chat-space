@@ -19,8 +19,8 @@ has_many :groups_users
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true, unique: true|
-|group_id|integer|null: false, foreign_key: true, unique: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 belongs_to :group
 belongs_to :user
@@ -45,8 +45,8 @@ has_many :groups_users
 |------|----|-------|
 |image|string||
 |content|string||
-|user_id|integer|null: false, foreign_key:true, unique: true|
-|group_id|integer|null: false, unique: true|
+|user_id|integer|null: false, foreign_key:true|
+|group_id|integer|null: false, foreign_key: true|
 <!-- user 時間　内容　画像　どのグループのメッセージなのか
 削除 -->
 ### Association
