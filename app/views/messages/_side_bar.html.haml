@@ -4,12 +4,15 @@
       .side__up__box__user-name
         tsurugi
       .side__up__box__menu
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('far', 'edit', class: 'edit') 
+        = link_to edit_user_path(current_user.id) do
           = icon('fas', 'cog', class: 'cog')
   .side__down
-    .group
-      .group__name
-        hhh
-      .group__latest-massage
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
