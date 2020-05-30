@@ -53,14 +53,16 @@
     background-color: #ddd;
     display: flex;
     line-height: 50px;
+    .new_message{
+      display: flex;
+    }
     .input-box{
-      position: relative;
+      // position: relative;
       width: 100%;
       background-color: #ffffff;
-
       &__text{
         height: 50px;
-        width: 100%;
+        width: calc(100vw - 470px);
         padding: 0 40px 0 10px;
         color: #434a54;
         border-style: none;
@@ -77,6 +79,9 @@
       &__image__file{
         display: none;
       }
+    }
+    .form__mask{
+      position: relative;
     }
     .submit-btn{
       width: 100px;
@@ -132,10 +137,12 @@
         margin-bottom: 5px;
         color: #ffffff;
       }
-      &__latest-massage{
+      &__message{
         font-size: 11px;
         color: #ffffff;
+        // text-decoration: none;
       }
+
 
   }
   }
