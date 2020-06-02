@@ -2,7 +2,7 @@
   .side__up
     .side__up__box
       .side__up__box__user-name
-        tsurugi
+        = current_user.name
       .side__up__box__menu
         = link_to new_group_path do
           = icon('far', 'edit', class: 'edit') 
