@@ -2,9 +2,11 @@
   .main__hedder
     .main__hedder__left-box
       .main__header__left-box__current-group
-        test
+        = @group.name
       .main__header__left-box__member-list
-        Member：tsurugi
+        Member：
+        - @group.users.each do |user|
+          = user.name
     = link_to edit_group_path(@group) do
       .main__hedder__edit_btn
         Edit
