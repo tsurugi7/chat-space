@@ -1,9 +1,9 @@
 .main
   .main__hedder
     .main__hedder__left-box
-      .main__header__left-box__current-group
+      .main__hedder__left-box__current-group
         = @group.name
-      .main__header__left-box__member-list
+      .main__hedder__left-box__member-list
         Member：
         - @group.users.each do |user|
           = user.name
